@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="../jquery/jquery-ui.css">
+  <script src="../jquery/jquery.js"></script>
+  <script src="../jquery/jquery-ui.js"></script>
+
+  <style>
+      #DJI_main, #PARROT_main, #YUNEEC_main, #ELIOS_main{
+          border: 1px solid black;
+          background-color: lightgray;
+          width: 300px;
+          padding-left: 20px;
+      }
+      .item{
+          border: black solid 1px;
+          width: 300px;
+      }
+
+      .grid{
+          display: grid;
+          grid-template-columns: repeat(3, 400px);
+          row-gap: 10px;
+      }
+
+
+  </style>
+</head>
+<body>
+<div id="main_page">
+  <div id="DJI_main">
+    <h3>DJI</h3>
+  </div>
+  <div id="PARROT_main">
+    <h3>PARROT</h3>
+  </div>
+  <div id="YUNEEC_main">
+    <h3>YUNEEC</h3>
+  </div>
+  <div id="ELIOS_main">
+    <h3>ELIOS</h3>
+  </div>
+</div>
+
+
+
+  <div id="buttons">
+    <input type="button" value="previous" id="p">
+    <input type="button" value="main page" id="mp">
+    <input type="button" value="next" id="n">
+  </div>
+
+    <div id="DJI">
+
+      <div class="accordion">
+        <h3 class="accordion-header">Additional Info1</h3>
+        <div>
+          <p>
+            Our platforms empower them to capture images that were once out of reach.
+          </p>
+        </div>
+
+        <h3 class="accordion-header">Additional Info2</h3>
+        <div>
+          <p>
+            Our flying and camera stabilization systems redefine camera placement and motion.
+          </p>
+        </div>
+
+        <h3 class="accordion-header">Additional Info3</h3>
+        <div>
+          <p>
+            Amazing photos and video, treasured personal memories, and high-end professional imagery are captured every day, in every corner of the world using DJI products.
+          </p>
+        </div>
+
+        <h3 class="accordion-header">Additional Info4</h3>
+        <div>
+          <p>
+            We do this through an unparalleled commitment to R&D, a culture of constant innovation and curiosity, and a focus on transforming complex technology into easy-to-use devices.
+          </p>
+        </div>
+
+        <h3 class="accordion-header">Additional Info5</h3>
+        <div>
+          <p>
+            Building on the ethos of “form follows function,” our products combine advanced technology with dynamic designs.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="item">
+          <h3>AIR2S</h3>
+          <img src="images/DJI/AIR2S.jpg" height="100" width="100"/>
+          <input type="button" value="Comment" class="comment">
+          <button>Add to cart</button>
+        </div>
+
+        <div class="item">
+          <h3>DJIFPV</h3>
+          <img src="images/DJI/DJIFPV.jpg" height="100" width="100"/>
+          <input type="button" value="Comment" class="comment">
+          <button>Add to cart</button>
+        </div>
+
+        <div class="item">
+          <h3>MAVIC2</h3>
+          <img src="images/DJI/MAVIC2.jpg" height="100" width="100"/>
+          <input type="button" value="Comment" class="comment">
+          <button>Add to cart</button>
+        </div>
+
+        <div class="item">
+          <h3>MAVIC2</h3>
+          <img src="images/DJI/MAVIC2SE.jpg" height="100" width="100"/>
+          <input type="button" value="Comment" class="comment">
+          <button>Add to cart</button>
+        </div>
+
+        <div class="item">
+          <h3>MAVIC2SE</h3>
+          <img src="images/DJI/MAVIC2SE.jpg" height="100" width="100"/>
+          <input type="button" value="Comment" class="comment">
+          <button>Add to cart</button>
+        </div>
+
+        <div class="item">
+          <h3>MAVIC3</h3>
+          <img src="images/DJI/MAVIC3.jpg" height="100" width="100"/>
+          <input type="button" value="Comment" class="comment">
+          <button>Add to cart</button>
+        </div>
+
+        <div class="item">
+          <h3>MINI2</h3>
+          <img src="images/DJI/MINI2.jpg" height="100" width="100"/>
+          <input type="button" value="Comment" class="comment">
+          <button>Add to cart</button>
+        </div>
+
+        <div class="item">
+          <h3>MINI2SE</h3>
+          <img src="images/DJI/MINI2SE.jpg" height="100" width="100"/>
+          <input type="button" value="Comment" class="comment">
+          <button>Add to cart</button>
+        </div>
+
+        <div class="item">
+          <h3>PHANTOM4</h3>
+          <img src="images/DJI/PHANTOM4.jpg" height="100" width="100"/>
+          <input type="button" value="Comment" class="comment">
+          <button>Add to cart</button>
+        </div>
+
+        <div class="item">
+          <h3>PHANTOM4PRO</h3>
+          <img src="images/DJI/PHANTOM4PRO.jpg" height="100" width="100"/>
+          <input type="button" value="Comment" class="comment">
+          <button>Add to cart</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="PARROT">
+
+      <div class="accordion">
+        <h3 class="accordion-header">Additional Info1</h3>
+        <div>
+          <p>
+            Today, Parrot has the largest partner ecosystem for professional drones: from enterprise drone platforms
+            (Skyward, a Verizon Company, Measure, an AgEagle Company), flight logs services (DroneLogbook, Airdata),
+            public safety programs (DroneSense) and advanced mission planning (QGroundControl, UgCS), to media and data
+            cloud platforms (Survae), real time geospatial situational awareness (Rapid Imaging, Textron Systems), surveying and mapping (PIX4D).
+          </p>
+        </div>
+
+        <h3 class="accordion-header">Additional Info2</h3>
+        <div>
+          <p>
+            Parrot also provides complete documentation about each product.
+          </p>
+        </div>
+
+        <h3 class="accordion-header">Additional Info3</h3>
+        <div>
+          <p>
+            Professionals can find precise technical answers on the drone’s specifications.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="item">
+          <h3>AIRBORN</h3>
+          <img src="images/PARROT/AIRBORN.jpg" height="100" width="100"/>
+          <input type="button" value="Comment" class="comment">
+          <button>Add to cart</button>
+        </div>
+
+        <div class="item">
+          <h3>ANAFI</h3>
+          <img src="images/PARROT/ANAFI.jpg" height="100" width="100"/>
+          <input type="button" value="Comment" class="comment">
+          <button>Add to cart</button>
+        </div>
+
+        <div class="item">
+          <h3>BEBOP</h3>
+          <img src="images/PARROT/BEBOP.png" height="100" width="100"/>
+          <input type="button" value="Comment" class="comment">
+          <button>Add to cart</button>
+        </div>
+
+        <div class="item">
+          <h3>DISCO</h3>
+          <img src="images/PARROT/DISCO.jpg" height="100" width="100"/>
+          <input type="button" value="Comment" class="comment">
+          <button>Add to cart</button>
+        </div>
+
+        <div class="item">
+          <h3>MAMBO</h3>
+          <img src="images/PARROT/MAMBO.jpg" height="100" width="100"/>
+          <input type="button" value="Comment" class="comment">
+          <button>Add to cart</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="YUNEEC">
+
+      <div class="accordion">
+        <h3 class="accordion-header">Additional Info1</h3>
+        <div>
+          <p>
+            We started out as a manufacturer of remote-controlled aircraft for model-making enthusiasts
+          </p>
+        </div>
+
+        <h3 class="accordion-header">Additional Info2</h3>
+        <div>
+          <p>
+            Coming from this background, we recognise that safety is the cornerstone of the usability and capability of our products.
+            This belief extends to the empowerment of the people who keep us safe every day.
+          </p>
+        </div>
+
+        <h3 class="accordion-header">Additional Info3</h3>
+        <div>
+          <p>
+            From Fire and Rescue to the Coast Guard and Law Enforcement, we believe a view from above will help first responders overcome obstacles and make us safer.
+          </p>
+        </div>
+
+        <h3 class="accordion-header">Additional Info4</h3>
+        <div>
+          <p>
+            Our humble beginnings started with innovation and accessibility in the aircraft industry. From the first commercially
+            successful ready-to-fly fixed wing RC airplane, to ground-breaking electric aircraft and next-generation aerial video
+            quadcopters, Yuneec has pushed the limits above and beyond in electric aviation for over 15 years.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="grid">
+        <div class="item">
+          <h3>H520</h3>
+          <img src="images/YUNEEC/H520.jpg" height="100" width="100"/>
+          <input type="button" value="Comment" class="comment">
+          <button>Add to cart</button>
+        </div>
+
+        <div class="item">
+          <h3>HPLUS</h3>
+          <img src="images/YUNEEC/HPLUS.jpg" height="100" width="100"/>
+          <input type="button" value="Comment" class="comment">
+          <button>Add to cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="ELIOS">
+
+      <div class="accordion">
+        <h3 class="accordion-header">Additional Info1</h3>
+        <div>
+          <p>
+            Carrying its own protective frame, Elios is collision-tolerant.
+            This means you can access the tightest spaces without any risk of crashing.
+            No need to focus on avoiding obstacles, Elios bounces off and roll on them to find its way.
+          </p>
+        </div>
+
+        <h3 class="accordion-header">Additional Info2</h3>
+        <div>
+          <p>
+            You can fly close or even in direct contact with humans without any risks of injuries.
+            Elios embeds a full HD camera, a thermal camera, and an on-board LED lighting system with a
+            remotely adjustable intensity. Once you have reached the most inaccessible places, you have all the tools
+            onboard to take the best possible shot in nearly any lighting conditions.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="item">
+          <h3>FELIOS</h3>
+          <img src="images/ELIOS/FELIOS.jpg" height="100" width="100"/>
+          <input type="button" value="Comment" class="comment">
+          <button>Add to cart</button>
+        </div>
+
+        <div class="item">
+          <h3>FELIOS2</h3>
+          <img src="images/ELIOS/FELIOS2.jpg" height="100" width="100"/>
+          <input type="button" value="Comment" class="comment">
+          <button>Add to cart</button>
+        </div>
+      </div>
+    </div>
+
+
+<div id="modal">
+  <h3>Rate this drone</h3>
+  <input type="text">
+</div>
+
+
+
+<script type="text/javascript">
+    let idx=0;
+    const manufacturers = ["DJI", "PARROT", "YUNEEC", "ELIOS"]
+    function hideDet(){
+        $("#DJI").hide();
+        $("#PARROT").hide();
+        $("#YUNEEC").hide();
+        $("#ELIOS").hide();
+        $("#buttons").hide();
+        $("#modal").hide
+    }
+
+    function showManu(manufactorer){
+        hideDet();
+        $("#" + manufactorer).show()
+        $("#buttons").show();
+    }
+
+
+    $(document).ready(function () {
+        hideDet();
+
+        $("#DJI_main, #PARROT_main, #YUNEEC_main, #ELIOS_main").click(function () {
+            const manufacturer = $(this).text().trim();
+            $("#main_page").hide();
+            showManu(manufacturer);
+        });
+
+        $("#mp").click(function () {
+            hideDet();
+            $("#main_page").show();
+        })
+
+        $("#p").click(function () {
+            idx = (idx - 1 + manufacturers.length) % manufacturers.length;
+            showManu(manufacturers[idx]);
+        });
+
+        $("#n").click(function () {
+            idx = (idx + 1) % manufacturers.length;
+            showManu(manufacturers[idx]);
+        });
+
+
+        $("#modal").dialog({
+            autoOpen: false,
+            modal: true,
+            buttons: {
+                Submit: function () {
+                    $(this).dialog("close");
+                }
+            }
+        })
+        $(".comment").click(function () {
+            $("#modal").dialog("open")
+        })
+
+        $(".accordion").accordion({
+            collapsible: true,
+            active: false,
+            disabled: true,
+            heightStyle: 'content'
+        }).accordion("refresh");
+
+        $(".accordion-header").click(function () {
+            $(this).next().slideToggle()
+        })
+    })
+</script>
+</body>
+</html>

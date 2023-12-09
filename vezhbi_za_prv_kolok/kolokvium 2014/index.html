@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="../jquery/jquery-ui.css">
+  <script src="../jquery/jquery.js"></script>
+  <script src="../jquery/jquery-ui.js"></script>
+
+  <style>
+    #grid{
+        display: grid;
+        grid-template-columns: repeat(2, 300px);
+        column-gap: 10px;
+        row-gap: 10px;
+        justify-content: center;
+    }
+
+    img{
+        width: 100px;
+        padding: 10px;
+    }
+
+  </style>
+
+
+</head>
+<body>
+    <div id="grid">
+      <div class="item">
+        <h3>Обувки</h3>
+        <img src="https://plus.unsplash.com/premium_photo-1682435561654-20d84cef00eb?q=80&w=1018&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="100px" height="100px">
+      </div>
+
+      <div class="item">
+        <h3>Облека</h3>
+        <img src="https://t3.ftcdn.net/jpg/03/34/79/68/360_F_334796865_VVTjg49nbLgQPG6rgKDjVqSb5XUhBVsW.jpg">
+      </div>
+
+      <div class="item">
+        <h3>Часовници</h3>
+        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/top-20-watch-brands-lead-1617145581.jpg?crop=1xw:0.84375xh;center,top&resize=1200:*">
+      </div>
+
+      <div class="item">
+        <h3>Производи за домот</h3>
+        <img src="https://cdn.firstcry.com/education/2023/01/13101355/Names-Of-Household-Appliances-In-English.jpg">
+      </div>
+    </div>
+
+    <div id="accordion">
+
+      <h3 class="accordion-header">Каталози</h3>
+      <div>
+        <a href="#">katalog1</a>
+        <a href="#">katalog2</a>
+        <a href="#">katalog3</a>
+        <a href="#">katalog4</a>
+        <a href="#">katalog5</a>
+      </div>
+
+
+      <h3 class="accordion-header">Продажни места</h3>
+      <div>
+        <ul>
+          <li>prodavnica1</li>
+          <li>prodavnica2</li>
+          <li>prodavnica3</li>
+        </ul>
+      </div>
+
+      <h3 class="accordion-header">Контакт</h3>
+      <div>
+        <p>Ул. Есенска 24/5 1000 Скопје
+          +38921234567
+          finkiit@iaispit.com
+        </p>
+      </div>
+    </div>
+
+<script type="text/javascript">
+  $(document).ready(function (){
+      $(".item").hover(function (){
+          $(this).find("img").css("border", "1px solid black")
+      }, function (){
+          $(this).find("img").css("border", "none")
+      })
+
+      $("#accordion").accordion({
+          collapsable: true,
+          active: false,
+          disabled: true
+      });
+
+      $(".accordion-header").click(function () {
+          $(this).next().slideToggle()
+      })
+  })
+</script>
+</body>
+</html>
