@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book reviews</title>
+  <link rel="stylesheet" href="jquery/jquery-ui.css">
+  <script src="jquery/jquery.js"></script>
+  <script src="jquery/jquery-ui.js"></script>
+  <style>
+    #modal label, #modal input{
+        display: block;
+    }
+  </style>
+</head>
+<body>
+
+<input type="button" value="ADD BOOK" id="button">
+
+<div id="modal">
+  <label>
+    Title
+    <input type="text" id="title">
+  </label>
+
+  <label>
+    Author
+    <input type="text" id="author">
+  </label>
+
+  <label>
+    Comments
+    <input type="text" id="comments">
+  </label>
+</div>
+
+<div id="books"></div>
+<script type="text/javascript">
+  $(document).ready(function (){
+      $("#modal").dialog({
+          autoOpen: false,
+          modal: true,
+          buttons: {
+              ADD: function (){
+                  addBook()
+                  $(this).dialog("close")
+              }
+          }, close: function () {
+              $("#title").val("");
+              $("#author").val("");
+              $("#comments").val("");
+          }
+      })
+
+      $("#button").click(function (){
+          $("#modal").dialog("open")
+      })
+
+      function addBook(){
+          let title = $("#title").val()
+          let author = $("#author").val()
+          let comments = $("#comments").val()
+          $("#books").append("TITLE: " + title + ", AUTHOR: " + author + ", COMMENTS: " + comments + "<br>")
+      }
+  })
+</script>
+</body>
+</html>

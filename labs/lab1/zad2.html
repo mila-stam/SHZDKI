@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>X-Factor</title>
+  <link rel="stylesheet" href="jquery/jquery-ui.css">
+  <script src="jquery/jquery.js"></script>
+  <script src="jquery/jquery-ui.js"></script>
+
+  <style>
+    label{
+        display: block;
+        padding-bottom: 15px;
+    }
+  </style>
+
+
+</head>
+<body>
+  <h1>Форма за пријавување на X-Factor</h1>
+  <label>
+    Име
+    <input type="text" id="name">
+  </label>
+
+  <label>
+    Уметничко име
+    <input type="text" id="art_name">
+  </label>
+
+  <label >
+    Пол
+    <input type="radio" name="gender" value="male"> Машки
+    <input type="radio" name="gender" value="female"> Женски
+  </label>
+
+  <label>
+    Жар
+    <select name="genre" id="genre">
+      <option value="classical">Classical Music</option>
+      <option value="pop">Pop Music</option>
+      <option value="rock">Rock Music</option>
+      <option value="jazz">Jazz Music</option>
+      <option value="hiphop">HipHop Music</option>
+    </select>
+  </label>
+
+  <input type="button" value="Пријави се" id="getInfo">
+
+  <p id="alert"></p>
+
+  <div id="dialog" style="display: none">
+    <p id="info"></p>
+  </div>
+
+<script type="text/javascript">
+  $(document).ready(function (){
+      $("#getInfo").click(function (){
+          let name = $("#name").val();
+          let art_name = $("#art_name").val();
+          let gender = $("input[name='gender']:checked").val();
+          let genre = $("#genre").val();
+          if(name === "" || art_name === "" || gender === undefined || genre === ""){
+              $("#alert").text("Сите полиња се задолжителни");
+          } else{
+              $("#dialog").dialog({
+                  autoOpen: false,
+                  modal: true,
+                  width: 300,
+                  buttons: {
+                      "Close": function (){
+                          $(this).dialog("close");
+                      }
+                  }
+              });
+
+              $("#dialog").dialog("open");
+              $("#info").text(name + " " + art_name + ", " + gender + ", " + genre + " - успешно се пријавивте");
+
+          }
+      });
+  });
+</script>
+</body>
+</html>

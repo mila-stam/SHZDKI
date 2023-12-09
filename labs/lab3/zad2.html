@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="jquery/jquery-ui.css">
+  <script src="jquery/jquery.js"></script>
+  <script src="jquery/jquery-ui.js"></script>
+  <style>
+      #titles {
+          display: grid;
+          grid-template-columns: repeat(4, 150px);
+          justify-content: center;
+      }
+
+      #titles > a {
+          background-color: darkred;
+          color: white;
+          border: 1px solid darkslategray;
+          padding: 10px;
+          text-align: center;
+          margin: 5px;
+          text-decoration: none;
+      }
+
+      .content {
+          display: grid;
+          grid-template-columns: repeat(1, 200px);
+          gap: 5px;
+          justify-content: center;
+          height: 0;
+      }
+
+      .content > div {
+          background-color: teal;
+          border: 1px solid black;
+          padding: 10px;
+          text-align: center;
+          width: 200px;
+          height: 25px;
+      }
+
+      #panel-container {
+          display: flex;
+          flex-direction: column;
+          width: 250px;
+          background-color: #f0f0f0;
+      }
+
+      .panel {
+          margin: 10px;
+      }
+
+      .panel-header {
+          cursor: pointer;
+      }
+
+  </style>
+</head>
+<body>
+<div id="titles">
+  <a href="#" id="1">Медицина</a>
+  <a href="#" id="2">Образование</a>
+  <a href="#" id="3">Сметководство</a>
+  <a href="#" id="4">Игри</a>
+</div>
+
+<div id="content1" class="content">
+  <div>MedIm</div>
+  <div>MedIA</div>
+  <div>FINKI-Med</div>
+</div>
+
+<div id="content2" class="content">
+  <div>FINKI-Edu</div>
+  <div>Edu-Buddy</div>
+  <div>FINKI-LE</div>
+  <div>FINKI-Math</div>
+</div>
+
+<div id="content3" class="content">
+  <div>eTax</div>
+  <div>FINKI-Tax</div>
+  <div>Tax-All</div>
+  <div>mySalary</div>
+</div>
+
+<div id="content4" class="content">
+  <div>FINKI-game</div>
+  <div>Grelima</div>
+  <div>Edaolith</div>
+  <div>Foessa</div>
+  <div>Jeroen</div>
+</div>
+<div id="panel-container">
+  <div class="panel" id="panel1">
+    <div class="panel-header">Тим</div>
+    <div class="panel-content">
+      <p>Алберт Ајнштајн</p>
+      <p>Ален Тјуринг</p>
+      <p>Архимед</p>
+    </div>
+  </div>
+
+  <div class="panel" id="panel2">
+    <div class="panel-header">Претставништва</div>
+    <div class="panel-content">
+      <p>Скопје</p>
+      <p>Прилеп</p>
+      <p>Велес</p>
+    </div>
+  </div>
+
+  <div class="panel" id="panel3">
+    <div class="panel-header">Контакт</div>
+    <div class="panel-content">
+      <p>Ул. Есенска 24/5 1000 Скопје</p>
+      <p>+38921234567</p>
+      <p>finkiit@iaispit.com</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(".content").hide()
+        $("a").click(function () {
+            let id = $(this).attr("id")
+            $(".content").hide()
+            $("#content" + id).show()
+        })
+
+        $(".panel").accordion({
+            collapsible: true,
+            active: false
+        })
+    })
+</script>
+</body>
+</html>

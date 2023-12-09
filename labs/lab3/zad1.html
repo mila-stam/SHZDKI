@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="jquery/jquery-ui.css">
+  <script src="jquery/jquery.js"></script>
+  <script src="jquery/jquery-ui.js"></script>
+  <style>
+      #grid {
+          display: grid;
+          grid-template-columns: repeat(4, 100px);
+          gap: 20px;
+          justify-content: center;
+      }
+
+      #grid > div:nth-child(2n) {
+          border: 2px solid red;
+      }
+
+      #grid > div:nth-child(2n-1) {
+          border: 2px solid black;
+      }
+
+      .item {
+          background: linear-gradient(#1E5799, #7db9e8);
+          width: 100px;
+          height: 100px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+      }
+      .item > p {
+          color: white;
+          text-align: center;
+      }
+  </style>
+
+
+</head>
+<body>
+<div id="grid">
+  <div class="item" data-word="tomato">
+    <p class="number">1</p>
+    <p class="word">tomato</p>
+  </div>
+  <div class="item" data-word="orange">
+    <p class="number">2</p>
+    <p class="word">orange</p>
+  </div>
+  <div class="item" data-word="strawberry">
+    <p class="number">3</p>
+    <p class="word">strawberry</p>
+  </div>
+  <div class="item" data-word="orange">
+    <p class="number">4</p>
+    <p class="word">orange</p>
+  </div>
+  <div class="item" data-word="peach">
+    <p class="number">5</p>
+    <p class="word">peach</p>
+  </div>
+  <div class="item" data-word="apple">
+    <p class="number">6</p>
+    <p class="word">apple</p>
+  </div>
+  <div class="item" data-word="cherry">
+    <p class="number">7</p>
+    <p class="word">cherry</p>
+  </div>
+  <div class="item" data-word="banana">
+    <p class="number">8</p>
+    <p class="word">banana</p>
+  </div>
+  <div class="item" data-word="avocado">
+    <p class="number">9</p>
+    <p class="word">avocado</p>
+  </div>
+  <div class="item" data-word="strawberry">
+    <p class="number">10</p>
+    <p class="word">strawberry</p>
+  </div>
+  <div class="item" data-word="apple">
+    <p class="number">11</p>
+    <p class="word">apple</p>
+  </div>
+  <div class="item" data-word="peach">
+    <p class="number">12</p>
+    <p class="word">peach</p>
+  </div>
+  <div class="item" data-word="banana">
+    <p class="number">13</p>
+    <p class="word">banana</p>
+  </div>
+  <div class="item" data-word="cherry">
+    <p class="number">14</p>
+    <p class="word">cherry</p>
+  </div>
+  <div class="item" data-word="tomato">
+    <p class="number">15</p>
+    <p class="word">tomato</p>
+  </div>
+  <div class="item" data-word="avocado">
+    <p class="number">16</p>
+    <p class="word">avocado</p>
+  </div>
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(".word").hide()
+        $(".item").hover(
+            function () {
+                if (!$(this).hasClass("flipped") && !$(this).hasClass("matched")) {
+                    $(this).css("background", "#9ebe2f");
+                }
+            },
+            function () {
+                if (!$(this).hasClass("flipped") && !$(this).hasClass("matched")) {
+                    $(this).css("background", "linear-gradient(#1E5799, #7db9e8)");
+                }
+            }
+        );
+        let flippedCards=[]
+        $(".item").click(function (){
+            let $this = $(this)
+
+            if ($this.hasClass("flipped") || flippedCards === 2){
+                return
+            }
+            $this.addClass("flipped")
+            $this.find(".word").show()
+            $this.find(".number").hide()
+
+            flippedCards.push($this)
+
+            if(flippedCards.length===2){
+                setTimeout(checkForMatch, 1000)
+            }
+        })
+
+        function checkForMatch(){
+            let card1 = flippedCards[0].data("word")
+            let card2 = flippedCards[1].data("word");
+
+            if (card1 === card2){
+                flippedCards.forEach(function (card){
+                    card.addClass("matched")
+                    card.css("background", "#808080")
+                })
+            } else{
+                flippedCards.forEach(function (card){
+                    card.removeClass("flipped")
+                    card.find(".word").hide()
+                    card.find(".number").show()
+                    card.css("background", "linear-gradient(#1E5799, #7db9e8)");
+                })
+            }
+            flippedCards = []
+        }
+    })
+</script>
+</body>
+</html>

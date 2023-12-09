@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom tab</title>
+  <link rel="stylesheet" href="jquery/jquery-ui.css">
+  <script src="jquery/jquery.js"></script>
+  <script src="jquery/jquery-ui.js"></script>
+
+</head>
+<body>
+<div style="background-color: yellow; padding: 10px">
+  <p>Custom tab</p>
+  <input type="button" value="Open Start" id="1">
+  <input type="button" value="Connect" id="2">
+  <input type="button" value="Pin apps" id="3">
+</div>
+
+
+<div id="text">
+  <div style="background-color: mediumslateblue; padding: 10px" id="text1">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Amet ducimus esse facere hic illum in, nam obcaecati officiis,
+      quasi repellat sequi similique tempore voluptatum? Alias aliquam
+      asperiores assumenda atque consectetur dolorum est ex harum, illum
+      incidunt maxime minima modi mollitia natus necessitatibus perspiciatis
+      quia quidem quo ratione rerum saepe tempora ullam unde ut veritatis
+      voluptatem voluptates voluptatum. Accusantium architecto at beatae
+      blanditiis commodi consequuntur corporis deserunt doloremque eius error
+      expedita explicabo, illo incidunt inventore iure iusto laboriosam laborum
+      libero, modi molestias non officiis praesentium qui quibusdam quisquam
+      ratione similique, veritatis. Consequuntur, dolores facere fuga impedit
+      in laboriosam magnam nulla totam?
+    </p>
+  </div>
+
+  <div style="background-color: mediumslateblue; padding: 10px" id="text2">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Amet ducimus esse facere hic illum in, nam obcaecati officiis,
+      quasi repellat sequi similique tempore voluptatum? Alias aliquam
+      asperiores assumenda atque consectetur dolorum est ex harum, illum
+      incidunt maxime minima modi mollitia natus necessitatibus perspiciatis
+      quia quidem quo ratione rerum saepe tempora ullam unde ut veritatis
+
+    </p>
+  </div>
+
+  <div style="background-color: mediumslateblue; padding: 10px" id="text3">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Amet ducimus esse facere hic illum in, nam obcaecati officiis,
+      quasi repellat sequi similique tempore voluptatum? Alias aliquam
+      asperiores assumenda atque consectetur dolorum est ex harum, illum
+      incidunt maxime minima modi mollitia natus necessitatibus perspiciatis
+      quia quidem quo ratione rerum saepe tempora ullam unde ut veritatis
+      voluptatem voluptates voluptatum. Accusantium architecto at beatae
+      blanditiis commodi consequuntur corporis deserunt doloremque eius error
+      expedita explicabo, illo incidunt inventore iure iusto laboriosam laborum
+      libero, modi molestias non officiis praesentium qui quibusdam quisquam
+      ratione similique, veritatis. Consequuntur, dolores facere fuga impedit
+      in laboriosam magnam nulla totam? Lorem ipsum dolor sit amet, consectetur
+      adipisicing elit. Ducimus, quasi! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Aliquam, sed.
+    </p>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#text div").hide()
+
+        $("input").click(function (){
+            $("#text div").hide()
+            let id = $(this).attr("id");
+            $("#text" + id).show()
+        });
+    });
+
+</script>
+</body>
+</html>

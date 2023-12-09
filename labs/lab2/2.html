@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hyper Market</title>
+  <link rel="stylesheet" href="jquery/jquery-ui.css">
+  <script src="jquery/jquery.js"></script>
+  <script src="jquery/jquery-ui.js"></script>
+
+  <style>
+    #grid{
+        display: grid;
+        grid-template-columns: repeat(3, 300px);
+        row-gap: 10px;
+        column-gap: 10px;
+    }
+    a{
+        border: 1px solid darkblue;
+        width: 300px;
+        height: 100px;
+        background-color: #1c94c4;
+    }
+  </style>
+</head>
+<body>
+
+<div id="grid">
+  <a href="#" id="1">Food and drinks</a>
+
+  <a href="#" id="2">Electronics</a>
+
+  <a href="#" id="3">Home and garden</a>
+
+  <a href="#" id="4">About us</a>
+
+  <a href="#" id="5">Contacts</a>
+</div>
+
+<div id="text1" class="content">
+  <h3>Food and drinks</h3>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  Aliquam aspernatur at consectetur deserunt explicabo hic
+  id illum minima molestias necessitatibus neque nostrum quasi
+  quis recusandae sint suscipit, tenetur totam veniam veritatis
+  voluptate! Accusamus cumque debitis doloribus dolorum libero,
+  neque nesciunt nostrum odio officia repellat repellendus
+  reprehenderit rerum temporibus velit voluptas?
+</div>
+
+<div id="text2" class="content">
+  <h3>Electronics</h3>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  Aliquam aspernatur at consectetur deserunt explicabo hic
+  id illum minima molestias necessitatibus neque nostrum quasi
+  quis recusandae sint suscipit, tenetur totam veniam veritatis
+  voluptate! Accusamus cumque debitis doloribus dolorum libero,
+  neque nesciunt nostrum odio officia repellat repellendus
+  reprehenderit rerum temporibus velit voluptas? Lorem ipsum
+  dolor sit amet, consectetur adipisicing elit. Consequatur f
+  ugit laudantium optio rem repellat? Aliquam assumenda blanditiis
+  consequatur cumque dolorem, dolorum ea eius eligendi enim
+  incidunt modi neque nobis pariatur quas recusandae temporibus
+  unde voluptas voluptatibus. Alias consequuntur officia omnis.
+</div>
+
+<div id="text3" class="content">
+  <h3>Home and garden</h3>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  Aliquam aspernatur at consectetur deserunt explicabo hic
+  id illum minima molestias necessitatibus neque nostrum quasi
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  Accusamus aliquam aut dolore eum explicabo ipsam libero,
+  minus possimus praesentium quis sed temporibus unde velit.
+  A doloremque ipsum iste praesentium recusandae reprehenderit
+  suscipit vel! Blanditiis culpa dolore eius fuga, fugiat non
+  nostrum qui veritatis vero? Animi blanditiis culpa distinctio,
+  dolor iure minima nemo non, numquam possimus provident, quaerat
+  quo rerum! Aspernatur cum dolorem, doloribus ea magnam pariatur
+  praesentium reprehenderit tenetur? Voluptas!
+</div>
+
+<div id="text4" class="content">
+  <h3>About us</h3>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  Aliquam aspernatur at consectetur deserunt explicabo hic
+  id illum minima molestias necessitatibus neque nostrum quasi
+</div>
+
+<div id="text5" class="content">
+  <h3>Contact</h3>
+  Lorem ipsum dolor sit amet
+  XXX/YYY-ZZZ
+</div>
+
+<button>GO BACK</button>
+
+<script type="text/javascript">
+  $(document).ready(function (){
+      $(".content").hide()
+      $("button").hide()
+      $("a").click(function (){
+          let id = $(this).attr("id")
+          $("#grid").hide()
+          $(".content").hide()
+          $("#text" + id).show()
+          $("button").show()
+      })
+
+      $("button").click(function (){
+          $(".content").hide()
+          $("#grid").show()
+          $("button").hide()
+      })
+  })
+</script>
+</body>
+</html>
