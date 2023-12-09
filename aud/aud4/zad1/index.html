@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>home</title>
+
+  <script type="text/javascript" src="jquery-2.1.0.min.js"></script>
+  <script>
+
+
+      $(function() {
+          $("#itemDet").hide();
+          var pull = $('#pull');
+              menu = $('nav ul');
+              menuHeight = menu.height();
+
+          $(pull).on('click', function(e) {
+              e.preventDefault();
+              menu.slideToggle();
+          });
+
+          $(window).resize(function(){
+              var w = $(window).width();
+              if(w > 320 && menu.is(':hidden')) {
+                  menu.removeAttr('style');
+              }
+          });
+
+
+          $('li').click(function(e) {
+
+          });
+
+
+      });
+
+
+
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div>
+  <nav class="navigation">
+    <li>
+      <a href="about_us.html">About Us</a>
+    </li>
+    <li>
+      <a href="studies.html">Studies</a>
+    </li>
+    <li>
+      Research
+    </li>
+    <li>Community</li>
+  </nav>
+</div>
+
+</body>
+</html>

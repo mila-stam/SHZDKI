@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+      .start {color:yellow; background:navy}
+      .end {color:green; background:#ff00ff}
+  </style>
+</head>
+<body>
+
+<form name="highlight" onmouseover="highlightButton('start')" onmouseout="highlightButton('end')">
+
+<input type="button" value="Pass your mouse over me">
+
+<input type="button" value="Pass your mouse over me too">
+
+</form>
+
+
+<script type="text/javascript">
+  function highlightButton(s){
+      if("INPUT" === event.srcElement.tagName)
+  }
+</script>
+</body>
+</html>

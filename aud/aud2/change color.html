@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <h1>My First JavaScript</h1>
+  <p id="text">JavaScript can change the colors</p>
+  <input type="button" onclick="changeFontColor()" value="Click Me!">
+
+<script>
+  function changeFontColor(){
+      let text = document.getElementById("text");
+      text.style.color = "red";
+  }
+</script>
+</body>
+</html>

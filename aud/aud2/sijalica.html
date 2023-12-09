@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <img id="img1" onclick="changeColor()" src="pic_bulboff.gif" width="100" height="180">
+  <p>Click the light bulb to turn on/off the light</p>
+
+<script>
+  function changeColor(){
+      let slika = document.getElementById("img1");
+      if(slika.src.match("bulbon")){
+          slika.src = "pic_bulboff.gif";
+      } else{
+          slika.src = "pic_bulbon.gif"
+      }
+  }
+</script>
+</body>
+</html>

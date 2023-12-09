@@ -1,0 +1,9 @@
+li{
+    list-style-type: none;
+    padding: 20px;
+}
+.navigation{
+    display: flex;
+    background-color: gray;
+    padding-left: 40%;
+}

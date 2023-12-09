@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <script type="text/javascript">
+      function OutOfBounds(p, errorCode){
+          this.description = p;
+          this.err = errorCode;
+      }
+    try{
+        var start = 7;
+        var end = 77;
+        var x = 100;
+        if(x<start || x>end){
+            throw new OutOfBounds("Nadvor od opseg");
+        }
+    } catch (err){
+          //if(err == "Nadvor od opseg"){
+             // alert("Promenlivata x = " + x + " e nadvor od opsegot [" + pocetok + "," + kraj + "]!!!")
+
+          //}
+        alert(err.description;)
+    }
+  </script>
+</body>
+</html>
