@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadaca 3</title>
+  <link rel="stylesheet" href="jquery/jquery-ui.css">
+  <script src="jquery/jquery.js"></script>
+  <script src="jquery/jquery-ui.js"></script>
+  <script src="script.js"></script>
+  <style>
+      #dv{
+          margin-top:15px;
+          width: 250px;
+          border: 1px dotted gray;
+          background-color:  #eef;
+          height: 110px;
+      }
+  </style>
+</head>
+<body>
+<p>Select a movie:</p>
+<input type="text" id="inp"><br>
+<div id="dv"></div>
+
+<script>
+    $(document).ready(function () {
+        var availableTags = [
+            {
+                value: "oblivion",
+                label: "Oblivion",
+                description: "A veteran assigned to extract Earth's remaining resources begins to question what he knows about his mission and himself."
+            },
+            {
+                value: "enders-game",
+                label: "Ender's Game",
+                description: "Young Ender Wiggin is recruited by the International Military to lead the fight against the Formics, a genocidal alien race which nearly annihilated the human race in a previous invasion."
+            },
+            {
+                value: "elysium",
+                label: "Elysium",
+                description: "In the year 2154, the very wealthy live on a man-made space station while the rest of the population resides on a ruined Earth. A man takes on a mission that could bring equality to the polarized worlds."
+            }
+        ];
+        $("#inp").autocomplete({
+            minLength:0,
+            source: availableTags,
+            focus:function (event,ui){
+                $("#inp").val(ui.item.label);
+                return false;
+            },
+            select: function( event, ui ) {
+                $("#inp").val(ui.item.label);
+                $( "#dv" ).html( ui.item.description );
+                return false
+            }
+
+        })
+            .autocomplete( "instance" )._renderItem = function( ul, item ) {
+            return $( "<li>" )
+                .append( "<div>" + item.label + "<br>" + item.description + "</div>" )
+                .appendTo( ul );
+        };
+    })
+
+
+</script>
+</body>
+</html>
+
+
